@@ -1,5 +1,6 @@
 
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import heroImage from '../assets/hero.png';
 
 const Hero = ({ config }) => {
   const heroRef = useScrollReveal({ className: 'revealed', threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
@@ -7,6 +8,7 @@ const Hero = ({ config }) => {
 
   if (!config) return null;
   const align = config.align === 'left' ? 'left' : 'center';
+  const bgImage = config.image || heroImage;
 
   return (
     <section
@@ -14,9 +16,9 @@ const Hero = ({ config }) => {
       id="hero"
       className="hero-section"
       data-align={align}
-      style={{ background: config.image ? `url(${config.image}) center/cover` : 'var(--gradient-brand)' }}
+      style={{ background: `url(${bgImage}) center/cover` }}
     >
-      {config.image && <div className="hero-bg" aria-hidden="true"></div>}
+      <div className="hero-bg" aria-hidden="true"></div>
       <div ref={contentRef} className="hero-content">
         {config.badge && <span className="hero-badge">{config.badge}</span>}
         <h1 className="hero-title">{config.title}</h1>

@@ -1,5 +1,6 @@
 
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import aboutImage from '../assets/about.png';
 
 const About = ({ config }) => {
   const sectionRef = useScrollReveal({ className: 'revealed', threshold: 0.15 });
@@ -7,6 +8,7 @@ const About = ({ config }) => {
   const imageRef = useScrollReveal({ className: 'revealed', threshold: 0.1 });
 
   if (!config) return null;
+  const image = config.image || aboutImage;
 
   return (
     <section ref={sectionRef} id="about" className="about-section">
@@ -31,10 +33,10 @@ const About = ({ config }) => {
               </div>
             )}
           </div>
-          {config.image && (
+          {image && (
             <div ref={imageRef} className="about-image-col reveal-right">
               <div className="about-image-wrapper">
-                <img src={config.image} alt={config.title} loading="lazy" />
+                <img src={image} alt={config.title} loading="lazy" />
                 <div className="about-image-decoration" aria-hidden="true"></div>
               </div>
             </div>

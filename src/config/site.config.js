@@ -46,7 +46,7 @@ export const siteConfig = {
   "hero": {
     "title": "Innovación que transforma",
     "subtitle": "Soluciones tecnológicas inteligentes que impulsan la innovación, optimizan procesos y llevan tu negocio al siguiente nivel.",
-    "image": "/images/hero.png",
+    "image": "",
     "align": "center"
   },
   "services": {
@@ -101,7 +101,7 @@ export const siteConfig = {
       "",
       "Con un enfoque en innovación, simplicidad y resultados, acompañamos a nuestros clientes en cada etapa de su transformación digital, asegurando que la tecnología se convierta en su mejor aliado para crecer y competir en un mercado cada vez más dinámico."
     ],
-    "image": "/images/about.png"
+    "image": ""
   },
   "gallery": {
     "enabled": true,

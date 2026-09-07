@@ -3,6 +3,7 @@ import './App.css';
 import { siteConfig } from './config/site.config';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import PromoSection from './components/PromoSection';
 import Services from './components/Services';
 import About from './components/About';
 //import Gallery from './components/Gallery';
@@ -14,6 +15,7 @@ import CustomSection from './components/CustomSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsappFloat from './components/WhatsappFloat';
+import NovemberPromo from './components/NovemberPromo';
 
 function App({ headerFooter }) {
   const [formData, setFormData] = useState({
@@ -44,6 +46,7 @@ function App({ headerFooter }) {
       {c.navbar?.enabled && <Navbar config={c.navbar} brand={{ ...c.brand, __headerFooter: headerFooter }} />}
       <main>
         {c.hero && <Hero config={c.hero} />}
+        {c.promoSection?.enabled && <PromoSection config={c.promoSection} />}
         {c.services && <Services config={c.services} />}
         {c.about && <About config={c.about} />}
         {/* {c.gallery?.enabled && <Gallery config={c.gallery} />} */}
@@ -77,6 +80,8 @@ function App({ headerFooter }) {
       {c.whatsappFloat?.enabled && (
         <WhatsappFloat config={c.whatsappFloat} whatsapp={c.contact?.whatsapp} />
       )}
+      {/* Promoción Noviembre - 60% OFF Landing Pages */}
+      <NovemberPromo config={c.novemberPromo} />
     </div>
   );
 }

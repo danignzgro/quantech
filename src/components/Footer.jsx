@@ -1,4 +1,6 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { BsFacebook } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
 
 const Footer = ({ config }) => {
   const sectionRef = useScrollReveal({ className: 'revealed', threshold: 0.1 });
@@ -42,11 +44,12 @@ const Footer = ({ config }) => {
         <div ref={socialRef} className="reveal">
           <h4 className="footer-heading">Síguenos</h4>
           <div className="footer-social">
-            {(config.social || []).map((s, i) => (
-              <a key={i} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="footer-social-link">
-                <span className="footer-icon">{s.icon}</span>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="footer-social-link">
+                <span className="footer-icon"><BsFacebook /></span>
               </a>
-            ))}
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="footer-social-link">
+                <span className="footer-icon"><BsInstagram /></span>
+              </a>
           </div>
         </div>
         )}

@@ -29,6 +29,10 @@ export const siteConfig = {
         "href": "#hero"
       },
       {
+        "label": "Promoción Noviembre",
+        "href": "#promo"
+      },
+      {
         "label": "Nuestros Servicios",
         "href": "#services"
       },
@@ -48,6 +52,27 @@ export const siteConfig = {
     "subtitle": "Soluciones tecnológicas inteligentes que impulsan la innovación, optimizan procesos y llevan tu negocio al siguiente nivel.",
     "image": "",
     "align": "center"
+  },
+  "promoSection": {
+    "enabled": true,
+    "title": "🔥 Promoción Noviembre - 60% OFF",
+    "subtitle": "Landing Pages profesionales a precio especial",
+    "discountPercent": 60,
+    "originalPrice": 4500,
+    "discountPrice": 2700,
+    "currency": "MXN",
+    "exclusions": "No incluye hosting ni dominio web. Estos se contratan por separado.",
+    "validUntil": "2025-11-30",
+    "ctaText": "Quiero mi Landing Page",
+    "ctaHref": "#contact",
+    "benefits": [
+      "Diseño 100% personalizado y responsive",
+      "Optimizado para conversiones (SEO + Velocidad)",
+      "Integración con WhatsApp y formularios",
+      "Analytics y tracking de visitantes",
+      "Entrega en 5-7 días hábiles",
+      "Soporte técnico incluido 30 días"
+    ]
   },
   "services": {
     "title": "Nuestros Servicios",
@@ -130,18 +155,24 @@ export const siteConfig = {
       {
         "label": "Facebook",
         "href": "https://facebook.com",
-        "icon": "📘"
       },
       {
         "label": "Instagram",
         "href": "https://instagram.com",
-        "icon": "📷"
       }
     ]
   },
   "whatsappFloat": {
     "enabled": true,
     "message": "Hola, quiero informes."
+  },
+  "novemberPromo": {
+    "enabled": true,
+    "discountPercent": 60,
+    "originalPrice": 4500,
+    "discountPrice": 2700,
+    "currency": "MXN",
+    "exclusions": "No incluye hosting ni dominio web. Estos se contratan por separado."
   },
   "seo": {
     "title": "QuanTech",

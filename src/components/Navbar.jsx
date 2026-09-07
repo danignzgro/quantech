@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Logo from '../assets/logo.png';
 
 const Navbar = ({ config, brand }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -16,8 +17,8 @@ const Navbar = ({ config, brand }) => {
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-inner">
         <a className="navbar-brand" href="#hero">
-          {brand?.logo ? (
-            <img src={brand.logo} alt={brand.name} className="navbar-logo" />
+          {Logo ? (
+            <img src={Logo} alt={brand.name} className="navbar-logo" />
           ) : (
             <span>{brand?.name || 'Inicio'}</span>
           )}

@@ -1,0 +1,372 @@
+/* ==========================================================================
+   LANDING INFO SECTION — Información de Landing Pages
+   ========================================================================== */
+
+.landing-info-section {
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-info-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10, 26, 47, 0.95), rgba(30, 41, 59, 0.9));
+  z-index: 0;
+}
+
+.landing-info-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.landing-info-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #ff3c00, #ff7a00);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.landing-info-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+.landing-info-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Grid principal */
+.landing-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 992px) {
+  .landing-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .landing-info-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .landing-info-cta {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .landing-info-sidebar {
+    grid-template-columns: 1fr;
+  }
+  .landing-info-cta {
+    grid-column: span 1;
+  }
+}
+
+/* Main content - Características */
+.landing-info-main {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+}
+
+.subsection-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 24px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.subsection-title svg {
+  color: var(--accent);
+}
+
+.features-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.feature-card {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(255, 60, 0, 0.1);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #ff3c00, #ff7a00);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 6px 0;
+}
+
+.feature-description {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Sidebar - Beneficios y Puntos Clave */
+.landing-info-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.benefits-card,
+.key-points-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+}
+
+.benefits-list,
+.key-points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.benefit-icon {
+  color: #10b981;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.key-points-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.5;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.key-points-list li:hover {
+  border-color: var(--accent);
+  background: #fffbeb;
+}
+
+.key-point-number {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #ff3c00, #ff7a00);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* CTA */
+.landing-info-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #ff3c00, #ff7a00);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(255, 60, 0, 0.3);
+  margin-top: 8px;
+}
+
+.landing-info-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 60, 0, 0.4);
+}
+
+.landing-info-cta:active {
+  transform: translateY(0);
+}
+
+/* Stats */
+.landing-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-top: 40px;
+  border-top: 1px solid #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .landing-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(255, 60, 0, 0.15);
+  border-color: var(--accent);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ff3c00, #ff7a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .landing-info-section {
+    background: var(--header-footer) !important;
+  }
+  
+  .landing-info-main,
+  .benefits-card,
+  .key-points-card,
+  .stat-item {
+    background: #1e293b;
+    border-color: #334155;
+  }
+  
+  .feature-card {
+    background: #0f172a;
+    border-color: #334155;
+  }
+  
+  .feature-card:hover {
+    border-color: var(--accent);
+  }
+  
+  .key-points-list li {
+    background: #0f172a;
+    border-color: #334155;
+  }
+  
+  .key-points-list li:hover {
+    background: #1e293b;
+  }
+  
+  .feature-title,
+  .subsection-title,
+  .landing-info-title {
+    color: #f1f5f9;
+  }
+  
+  .feature-description,
+  .benefits-list li,
+  .key-points-list li span,
+  .landing-info-subtitle,
+  .stat-label {
+    color: #94a3b8;
+  }
+}

@@ -74,6 +74,73 @@ export const siteConfig = {
       "Soporte técnico incluido 30 días"
     ]
   },
+  "landingInfo": {
+    "enabled": true,
+    "title": "¿Por qué necesitas una Landing Page?",
+    "subtitle": "Convierte visitantes en clientes con una página diseñada para vender",
+    "features": [
+      {
+        "icon": "📱",
+        "title": "100% Responsive & Mobile First",
+        "description": "Se adapta perfectamente a cualquier dispositivo. Más del 60% del tráfico viene de móviles y tu página se verá impecable en todos."
+      },
+      {
+        "icon": "⚡",
+        "title": "Velocidad de Carga Extrema",
+        "description": "Optimización técnica avanzada: compresión, caché, CDN, lazy loading. Carga en menos de 3 segundos para no perder clientes."
+      },
+      {
+        "icon": "🔍",
+        "title": "SEO Técnico Integrado",
+        "description": "Estructura semántica, meta tags, schema.org, sitemap, robots.txt. Tu página nace lista para posicionar en Google."
+      },
+      {
+        "icon": "📊",
+        "title": "Analytics & Tracking Completo",
+        "description": "Google Analytics 4, Facebook Pixel, Google Tag Manager, eventos de conversión. Mide cada clic y optimiza tus campañas."
+      },
+      {
+        "icon": "💬",
+        "title": "WhatsApp & Formularios Inteligentes",
+        "description": "Botón flotante de WhatsApp, formularios con validación, envío a email/CRM, respuestas automáticas. Captura leads 24/7."
+      },
+      {
+        "icon": "🎨",
+        "title": "Diseño Persuasivo & Conversión",
+        "description": "Psicología del color, copywriting de venta, CTA estratégicos, prueba social, urgencia. Cada elemento está pensado para convertir."
+      },
+      {
+        "icon": "🔒",
+        "title": "Seguridad & SSL Incluido",
+        "description": "Certificado SSL, headers de seguridad, protección anti-spam, formularios seguros. Tu negocio y tus clientes protegidos."
+      },
+      {
+        "icon": "🌐",
+        "title": "Dominio Propio & Email Corporativo",
+        "description": "Te ayudamos a configurar tu dominio (tunegocio.com) y emails profesionales (ventas@tunegocio.com). Imagen 100% profesional."
+      }
+    ],
+    "benefits": [
+      "Aumenta tus ventas sin aumentar tu presupuesto publicitario",
+      "Captura leads calificados mientras duermes",
+      "Proyecta una imagen profesional y confiable",
+      "Diferénciate de la competencia con diseño único",
+      "Mide el ROI real de cada campaña de marketing",
+      "Automatiza la captación de clientes potenciales",
+      "Escala tu negocio sin contratar más vendedores",
+      "Recupera la inversión en el primer mes"
+    ],
+    "keyPoints": [
+      "Una landing page bien hecha convierte 3-5x más que una web genérica",
+      "El 94% de las primeras impresiones son de diseño - tienes 3 segundos",
+      "Empresas con landing pages generan 55% más leads (HubSpot)",
+      "El 70% de usuarios juzgan credibilidad por el diseño web",
+      "Mobile-first ya no es opcional: Google indexa solo versión móvil",
+      "Cada segundo de retraso reduce conversiones en 7% (Amazon)"
+    ],
+    "ctaText": "Quiero mi Landing Page",
+    "ctaHref": "#contact"
+  },
   "services": {
     "title": "Nuestros Servicios",
     "items": [
@@ -146,7 +213,12 @@ export const siteConfig = {
       "phone",
       "message"
     ],
-    "submitLabel": "Enviar Mensaje"
+    "submitLabel": "Enviar Mensaje",
+    "emailjs": {
+      "serviceId": "service_ua1qdej",
+      "templateId": "template_mhuwwxt",
+      "publicKey": "kJ7646z3ZKnquTD30"
+    }
   },
   "footer": {
     "enabled": true,

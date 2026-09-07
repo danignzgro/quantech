@@ -4,6 +4,7 @@ import { siteConfig } from './config/site.config';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import PromoSection from './components/PromoSection';
+import LandingInfoSection from './components/LandingInfoSection';
 import Services from './components/Services';
 import About from './components/About';
 //import Gallery from './components/Gallery';
@@ -18,27 +19,6 @@ import WhatsappFloat from './components/WhatsappFloat';
 import NovemberPromo from './components/NovemberPromo';
 
 function App({ headerFooter }) {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aquí se conecta el backend / API de envío de leads (fase + automatización).
-    /* eslint-disable */console.log(...oo_oo(`525291210_37_4_37_44_4`,'Form submitted:', formData));
-  };
-
   const c = siteConfig;
 
   return (
@@ -47,6 +27,7 @@ function App({ headerFooter }) {
       <main>
         {c.hero && <Hero config={c.hero} />}
         {c.promoSection?.enabled && <PromoSection config={c.promoSection} />}
+        {c.landingInfo?.enabled && <LandingInfoSection config={c.landingInfo} />}
         {c.services && <Services config={c.services} />}
         {c.about && <About config={c.about} />}
         {/* {c.gallery?.enabled && <Gallery config={c.gallery} />} */}
@@ -57,14 +38,7 @@ function App({ headerFooter }) {
         {(c.customSections || []).map((s) => (
           <CustomSection key={s.id} config={s} />
         ))}
-        {c.contact && (
-          <Contact
-            config={c.contact}
-            formData={formData}
-            handleInputChange={handleInputChange}
-            handleSubmit={handleSubmit}
-          />
-        )}
+        {c.contact && <Contact config={c.contact} />}
       </main>
       {c.footer?.enabled && (
         <Footer

@@ -17,21 +17,35 @@ const NovemberPromo = ({ config }) => {
     exclusions = 'No incluye hosting ni dominio web. Estos se contratan por separado.'
   } = config;
 
-  // Calcular tiempo restante hasta fin de noviembre
+  // La promoción estará activa desde el 15 de septiembre hasta el 30 de noviembre.
   useEffect(() => {
     const calculateTimeLeft = () => {
       const now = new Date();
-      const endOfNovember = new Date(now.getFullYear(), 10, 30, 23, 59, 59); // 30 de noviembre
-      const diff = endOfNovember - now;
+      const promoStart = new Date(now.getFullYear(), 8, 15, 0, 0, 0); // 15 de septiembre
+      const promoEnd = new Date(now.getFullYear(), 10, 30, 23, 59, 59); // 30 de noviembre
+
+      let diff = 0;
+      let label = 'Termina en:';
+
+      if (now < promoStart) {
+        diff = promoStart - now;
+        label = 'Comienza en:';
+      } else if (now <= promoEnd) {
+        diff = promoEnd - now;
+        label = 'Termina en:';
+      } else {
+        diff = 0;
+        label = 'Oferta finalizada';
+      }
 
       if (diff > 0) {
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-        setTimeLeft({ days, hours, minutes, seconds });
+        setTimeLeft({ days, hours, minutes, seconds, label });
       } else {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0, label });
       }
     };
 
@@ -96,7 +110,7 @@ const NovemberPromo = ({ config }) => {
             <div className="promo-content">
               <div className="promo-main">
                 <h2 className="promo-title">¡Landing Pages al <span>{discountPercent}% OFF</span>!</h2>
-                <p className="promo-subtitle">Solo durante noviembre. Transforma tu presencia digital.</p>
+                <p className="promo-subtitle">Válido del 15 de septiembre al 30 de noviembre. Transforma tu presencia digital.</p>
 
                 {/* Precios */}
                 <div className="promo-pricing">
@@ -122,7 +136,7 @@ const NovemberPromo = ({ config }) => {
                 {/* Countdown timer */}
                 <div className="promo-countdown">
                   <FiClock className="countdown-icon" />
-                  <span className="countdown-label">Termina en:</span>
+                  <span className="countdown-label">{timeLeft.label}</span>
                   <div className="countdown-timer">
                     <div className="countdown-item">
                       <span className="countdown-value">{timeLeft.days}</span>
